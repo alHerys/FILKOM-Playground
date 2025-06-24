@@ -14,381 +14,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" type="text-css" href="style.css"/>
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #eeeeee;
-      font-family: 'Quicksand', sans-serif;
-    }
-
-    .tag-button {
-      border: 1px solid rgba(152, 91, 222, 1);
-      border-radius: 999px;
-      padding: 8px 16px;
-      margin: 5px;
-      font-size: 0.9rem;
-      transition: background-color 0.2s;
-    }
-
-    .tag-button:hover {
-      background-color: rgb(158, 154, 154);
-    }
-
-    .start-btn {
-      padding: 12px 24px;
-      font-weight: bold;
-      border-radius: 999px;
-      background-color: rgba(240, 99, 14, 1);
-      border: none;
-    }
-
-    .arrow-down {
-      font-size: 24px;
-      animation: bounce 1.5s infinite;
-      margin-top: 40px;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(10px); }
-    }
-
-    .hero-section {
-      position: relative;
-      width: 100%;
-      min-height: 100vh;
-      display: flex;
-      align-items: flex-start;      /* Mulai dari atas */
-      justify-content: center;
-      color: white;
-      overflow: hidden;
-      background-image: linear-gradient(
-        rgba(30, 57, 77, 1), 
-        rgba(50, 61, 131, 1),
-        rgba(171, 106, 57, 1)
-      );
-    }
-
-    .hero-section::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background-image: url(GKM.jpg);
-      background-size: cover;
-      background-position: top center;
-      opacity: 0.15;
-      z-index: 0;
-    }
-
-    .about-heading {
-      font-family: 'Quicksand', sans-serif;
-      font-weight: 600;
-      font-size: 53px;
-      line-height: 1.4;
-      letter-spacing: 0;
-      margin: 0;
-      max-width: 672px;
-      text-align: left;
-    }
-
-    /* Desktop (default, max-width 1440px) */
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
-      width: 100%;
-      max-width: 1440px;
-      margin: 10vh auto 0 auto; /* Turunkan konten 10% dari tinggi layar */
-      padding-top: 80px;
-      padding-bottom: 0;
-      text-align: center;
-    }
-
-    .hero-title {
-      margin-bottom: 8px; /* jarak kecil ke tag */
-    }
-
-    /* Responsive Footer for Tablet (split screen) */
-    @media (max-width: 991.98px) and (min-width: 576px) {
-      .footer-section .row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-      }
-
-      .footer-section .col-md-3,
-      .footer-section .col-md-2 {
-        flex: 1 1 45%;
-        max-width: 48%;
-      }
-
-      .footer-section .social-icons {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .footer-section h6,
-      .footer-section p,
-      .footer-section a {
-        text-align: left;
-      }
-    }
-
-    /* Responsive Footer for Mobile */
-    @media (max-width: 575.98px) {
-      .footer-section .row {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-
-      .footer-section .col-md-3,
-      .footer-section .col-md-2 {
-        max-width: 100%;
-      }
-
-      .footer-section .social-icons {
-        gap: 10px;
-      }
-
-      .footer-section h6,
-      .footer-section p,
-      .footer-section a {
-        text-align: left;
-      }
-    }
-
-
-    /* Responsive image for hero section */
-    .hero-section img,
-    .hero-section picture,
-    .hero-section svg {
-      max-width: 100%;
-      height: auto;
-    }
-
-    /* Responsive navbar brand */
-    #mainNavbar .navbar-brand span {
-      font-size: 1.1rem;
-    }
-    @media (max-width: 575.98px) {
-      #mainNavbar .navbar-brand span {
-        font-size: 0.95rem;
-      }
-    }
-
-    #mainNavbar {
-      background-color: transparent;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    #mainNavbar.scrolled {
-      background-color: rgba(30, 57, 77, 0.9);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    
-    #mainNavbar .navbar-brand,
-    #mainNavbar .navbar-brand span,
-    #mainNavbar .nav-link {
-      color: #fff !important;
-    }
-
-    #mainNavbar .navbar-brand span {
-      margin-left: 12px;
-    }
-
-    /* Pastikan selector sesuai dengan logo di navbar */
-    #mainNavbar .navbar-brand img {
-      width: 50px !important;
-      height: 55px !important;
-      object-fit: contain;
-      margin-right: 10px;
-      transition: filter 0.3s;
-    }
-
-    #mainNavbar .scrolled .navbar-brand img {
-      transform: scale(100rem);
-    }
-
-    .footer-section {
-      background-color: white;
-      color: black;
-      font-family: inherit;
-    }
-
-    .footer-section, .footer-section * {
-      font-family: Quicksand, Helvetica, sans-serif !important;
-    }
-
-    .footer-section a {
-      text-decoration: none;
-      color: rgb(0, 0, 0);
-    }
-
-    .footer-section a:hover {
-      color: #ff6f00;
-    }
-
-    .social-icons img {
-      transition: transform 0.2s ease;
-    }
-
-    .footer-top-line {
-      border: none;
-      border-top: 1px solid black;
-      margin: 0;
-      width: 100%;
-    }
-
-    .footer-bottom-line {
-      border: none;
-      border-top: 1px solid black;
-      opacity: 1;
-    }
-
-    .social-icons img:hover {
-      transform: scale(1.1);
-    }
-
-    /* Offcanvas background transparan dan logo tetap jelas */
-    .offcanvas.offcanvas-start {
-      background: rgba(30, 57, 77, 0.9) !important;
-      backdrop-filter: blur(2px);
-    }
-
-    /* Pastikan semua teks menu putih */
-    .offcanvas .nav-link,
-    .offcanvas .offcanvas-title {
-      color: white !important;
-    }
-
-    /* Hilangkan shadow dan border jika ingin lebih clean */
-    .offcanvas {
-      box-shadow: none;
-      border: none;
-      top: 56px; /* atau tinggi navbar/header kamu */
-      height: calc(100% - 56px);
-    }
-
-    /* Hamburger animasi sederhana */
-    #hamburgerBtn {
-      width: 40px;
-      height: 40px;
-      background: none;
-      border: none;
-      outline: none;
-      box-shadow: none;
-      position: relative;
-      z-index: 1052;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 7px;
-      padding: 0;
-    }
-    .hamburger-bar {
-      display: block;
-      width: 28px;
-      height: 3px;
-      background: #fff;
-      border-radius: 2px;
-      transition: all 0.3s cubic-bezier(.4,2,.6,1);
-      position: relative;
-    }
-    #hamburgerBtn.active .hamburger-bar:nth-child(1) {
-      transform: translateY(10px) rotate(45deg);
-    }
-    #hamburgerBtn.active .hamburger-bar:nth-child(2) {
-      opacity: 0;
-    }
-    #hamburgerBtn.active .hamburger-bar:nth-child(3) {
-      transform: translateY(-10px) rotate(-45deg);
-    }
-
-    /* Logo transisi ke putih */
-    #mainNavbar .navbar-brand img{
-      width: 48px !important;
-      height: 48px !important;
-      object-fit: contain;
-      margin-right: 10px;
-      transition: filter 0.3s;
-    }
-
-    .logo-white {
-      filter: brightness(0) invert(1);
-    }
-
-    /* Style untuk side menu */
-    .side-menu {
-      position: fixed;
-      top: 70px; /* tinggi navbar */
-      left: 0;
-      width: 200px;
-      height: calc(100% - 10px);
-      background: rgba(30, 57, 77, 0.95);
-      box-shadow: 2px 0 8px rgba(0,0,0,0.08);
-      transform: translateX(-100%);
-      transition: transform 0.3s cubic-bezier(.4,2,.6,1);
-      z-index: 1040;
-      padding-top: 0;
-    }
-    .side-menu.active {
-      transform: translateX(0);
-    }
-    .menu-link {
-      display: block;
-      color: white;
-      font-weight: 700;
-      font-size: 1.2rem;
-      padding: 16px 0 20px;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .menu-link:hover {
-      color: #ff9800;
-    }
-    @media (max-width: 575.98px) {
-      .side-menu {
-        top: 56px;
-        height: calc(100% - 56px);
-        width: 80vw;
-        max-width: 320px;
-      }
-    }
-
-    #hamburgerBtn,
-    #hamburgerBtn:focus,
-    #hamburgerBtn:active {
-      outline: none !important;
-      box-shadow: none !important;
-      border: none !important;
-    }
-
-    .hero-content {
-      padding-top: 80px;
-    }
-    @media (max-width: 768px) {
-      .hero-content {
-        padding-top: 48px;
-      }
-    }
-
-  </style>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <link rel="scripts" href="script.js"/>
 </head>
-<body>
 
+<body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-md navbar-light fixed-top px-2" id="mainNavbar" style="height:70px;">
     <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img id="navbar-logo" src="LOGO FL.png" alt="Logo">
+        <img id="navbar-logo" src="LOGO WARNA.svg" alt="Logo">
         <span class="ms-2">FILKOM PLAYGROUND</span>
       </a>
       <!-- Hamburger button putih -->
@@ -408,12 +43,14 @@
   </nav>
 
   <!-- Offcanvas menu custom -->
-  <div id="sideMenu" class="side-menu">
-    <ul class="list-unstyled m-0 p-4">
-      <li><a href="#" class="menu-link">Home</a></li>
-      <li><a href="#" class="menu-link">Explore</a></li>
-      <li><a href="#" class="menu-link">Creators</a></li>
-    </ul>
+  <div id="sideMenu" class="side-menu-overlay">
+    <div class="side-menu-content">
+      <ul class="list-unstyled m-0 p-0">
+        <li><a href="#" class="menu-link">Home</a></li>
+        <li><a href="#" class="menu-link">Explore</a></li>
+        <li><a href="#" class="menu-link">Creators</a></li>
+      </ul>
+    </div>
   </div>
 
   <!-- Hero Section -->
@@ -439,7 +76,7 @@
       <button class="btn btn-dark start-btn mt-4">Start Exploring</button>
 
       <!-- Arrow -->
-      <div class="arrow-down mt-4">
+      <div class="arrow-down mt-1">
         <i class="bi bi-chevron-double-down"></i>
       </div>
     </div>
@@ -447,11 +84,10 @@
 
   <!-- About Us Section -->
   <section class="d-flex align-items-center position-relative" style="min-height: 100vh; background-color: white;">
-    
     <!-- Background -->
     <img src="About Us Laptop.svg" alt="About Us Background" 
-        class="position-absolute top-0 start-0 w-100 h-620" 
-        style="z-index: 0; object-fit: cover; opacity: 2;">
+        class="position-absolute top-0 start-0 w-100" 
+        style="z-index: 0; object-fit: cover; opacity: 1;">
     
     <!-- Content -->
     <div class="container position-relative" style="z-index: 1;">
@@ -503,8 +139,8 @@
   </section>
 
   <!-- What We Engaged Section -->
-  <section class="d-flex flex-column align-items-center position-relative mt-0" 
-          style="background: var(--Basic-Gradient, linear-gradient(90deg, #134489 0%, #F5680F 100%)); padding: 30px 0 60px 0;">
+  <section class="d-flex flex-column align-items-center position-relative mt-0"
+          style="background: var(--Basic-Gradient, linear-gradient(90deg, #134489 0%, #F5680F 100%)); padding: 30px 0 60px 0; margin-bottom: 32px;">
     
     <!-- Judul tengah dengan garis -->
     <div class="d-flex align-items-center justify-content-center mb-3" style="gap: 20px;">
@@ -521,16 +157,28 @@
     <!-- Statistik -->
     <div class="row text-center g-5" style="max-width: 1000px;">
       <div class="col-3 pe-4">
-        <p class="text-white">100+ <br> Projects</p>
+        <div class="text-white d-flex flex-column align-items-center">
+          <span style="font-size: 1.1rem; font-weight: 600;">100+</span>
+          <span style="font-size: 1.1rem;">Projects</span>
+        </div>
       </div>
       <div class="col-3 pe-4">
-        <p class="text-white">200+ <br> Creator</p>
+        <div class="text-white d-flex flex-column align-items-center">
+          <span style="font-size: 1.1rem; font-weight: 600;">200+</span>
+          <span style="font-size: 1.1rem;">Creators</span>
+        </div>
       </div>
       <div class="col-3 pe-4">
-        <p class="text-white">50+ <br> Achievements</p>
+        <div class="text-white d-flex flex-column align-items-center">
+          <span style="font-size: 1.1rem; font-weight: 600;">50+</span>
+          <span style="font-size: 1.1rem;">Achievements</span>
+        </div>
       </div>
       <div class="col-3">
-        <p class="text-white">1000+ <br> Users</p>
+        <div class="text-white d-flex flex-column align-items-center">
+          <span style="font-size: 1.1rem; font-weight: 600;">1000+</span>
+          <span style="font-size: 1.1rem;">Users</span>
+        </div>
       </div>
     </div>
   </section>
@@ -539,25 +187,24 @@
   <footer class="footer-section">
   <div class="footer-top-line"></div>
   <div class="container py-4">
-    <div class="row justify-content-between">
-
+    <div class="row justify-content-between align-items-start">
       <!-- Logo + Social Media -->
       <div class="col-sm-6 col-md-3 mb-4">
-        <img src="LOGO FL.png" alt="Logo" width="50" class="mb-3">
+        <img src="LOGO WARNA.svg" alt="Logo" width="65" class="mb-3">
         <h6><strong>Connect With Us</strong></h6>
-        <div class="social-icons d-flex gap-2 mt-2 flex-wrap">
-          <a href="#"><img src="Instagram.svg" alt="Instagram" width="28"></a>
-          <a href="#"><img src="LinkedIn.svg" alt="LinkedIn" width="28"></a>
-          <a href="#"><img src="GitHub.svg" alt="GitHub" width="28"></a>
+        <div class="social-icons d-flex gap-3 mt-3 flex-wrap">
+          <a href="#"><img src="Instagram.svg" alt="Instagram" width="30"></a>
+          <a href="#"><img src="LinkedIn.svg" alt="LinkedIn" width="30"></a>
+          <a href="#"><img src="GitHub.svg" alt="GitHub" width="30"></a>
         </div>
-        <div style=" margin-top: 8px;">
-          <a href="#"><img src="YouTube.svg" alt="YouTube" width="28"></a>
-          <a href="#"><img src="Discord.svg" alt="Discord" width="28"></a>
+        <div class="social-icons d-flex gap-3 mt-3 flex-wrap">
+          <a href="#"><img src="YouTube.svg" alt="YouTube" width="30"></a>
+          <a href="#"><img src="Discord.svg" alt="Discord" width="30"></a>
         </div>
       </div>
 
       <!-- Navigation -->
-      <div class="col-sm-6 col-md-2 pt-3">
+      <div class="col-sm-6 col-md-2 pt-2">
         <h6><strong>Navigation</strong></h6>
         <ul class="list-unstyled mt-2">
           <li><a href="#">Home</a></li>
@@ -567,9 +214,9 @@
       </div>
 
       <!-- Visit -->
-      <div class="col-sm-6 col-md-2 pt-3">
-        <h6><strong>Visit</strong></h6>
-        <ul class="list-unstyled mt-2">
+      <div class="col-sm-6 col-md-2 pt-2">
+        <h6 class="mb-2"><strong>Visit</strong></h6>
+        <ul class="list-unstyled mb-0">
           <li><a href="https://www.ub.ac.id/id/" target="_blank">Universitas Brawijaya</a></li>
           <li><a href="https://filkom.ub.ac.id/" target="_blank">FILKOM Official</a></li>
           <li><a href="https://filkom.ub.ac.id/layanan-fasilitas/filkom-apps/" target="_blank">FILKOM Apps</a></li>
@@ -579,13 +226,12 @@
       </div>
 
       <!-- Find Us -->
-      <div class="col-sm-6 col-md-3 pt-3">
+      <div class="col-sm-6 col-md-3 pt-2">
         <h6><strong>Find us</strong></h6>
         <p class="mt-2 mb-0">Malang, East Java, Indonesia</p>
         <a href="https://maps.app.goo.gl/tVWhrCbyJqKtrL7x7" target="_blank" class="text-primary">View on Maps</a>
       </div>
     </div>
-
     <hr class="footer-bottom-line my-4">
     <p class="text-center small mb-0"> &copy; 2025 FILKOM PLAYGROUND</p>
   </div>
@@ -600,10 +246,10 @@
       const logo = document.getElementById("navbar-logo");
       if (window.scrollY > 50) {
         navbar.classList.add("scrolled");
-        logo.src = "LOGO P.svg"; // Logo putih
+        logo.src = "LOGO PUTIH.svg"; // Logo putih
       } else {
         navbar.classList.remove("scrolled");
-        logo.src = "LOGO FL.png"; // Logo berwarna
+        logo.src = "LOGO WARNA.svg"; // Logo berwarna
       }
     });
 
