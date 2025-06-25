@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FILKOM Playground</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+
+  <!-- Google Fonts: Quicksand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-light fixed-top px-2 navbar-darktext" id="mainNavbar" style="height:70px;">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img id="navbar-logo" src="LOGO WARNA.svg" alt="Logo">
+        <span class="ms-2">FILKOM PLAYGROUND</span>
+      </a>
+      <!-- Hamburger button putih -->
+      <button class="navbar-toggler border-0 d-md-none" type="button" id="hamburgerBtn" aria-label="Toggle navigation">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#">Explore</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#">Creators</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Offcanvas menu custom -->
+  <div id="sideMenu" class="side-menu-overlay">
+    <div class="side-menu-content">
+      <ul class="list-unstyled m-0 p-0">
+        <li><a href="#" class="menu-link">Home</a></li>
+        <li><a href="#" class="menu-link">Explore</a></li>
+        <li><a href="#" class="menu-link">Creators</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Hero Project Section -->
+  <section class="pt-5" style="background:transparent;position:relative;z-index:1;">
+    <!-- Content -->
+    <div class="container text-center" style="padding-top:120px;">
+      <h1 class="fw-bold mb-4" style="font-size:2.8rem;">
+        Explore <span style="color:#F5680F;">Projects</span> Where <span style="color:#2B5BA7;">Thoughts</span> And <span style="color:#16B3F7;">Hardwork</span><br>Fuse Together
+      </h1>
+      <form class="d-flex justify-content-center mb-4" style="max-width:1100px;margin:0 auto;">
+        <div class="input-group" style="width:100%;">
+          <span class="input-group-text bg-white border-end-0" style="border-radius:2rem 0 0 2rem;">
+            <i class="bi bi-search"></i>
+          </span>
+          <input class="form-control border-start-0" style="border-radius:0 2rem 2rem 0;font-size:1.2rem;" type="search" placeholder="Search Projects by Name" aria-label="Search">
+        </div>
+      </form>
+      <div class="d-flex flex-wrap justify-content-center gap-4 mt-4" style="font-size:1rem;">
+        <span class="fw-bold">Show All</span>
+        <span class="fw-bold">AI & Data Science</span>
+        <span class="fw-bold">Websites</span>
+        <span class="fw-bold">Mobile Apps</span>
+        <span class="fw-bold">Backend System</span>
+        <span class="fw-bold">Machine Learning</span>
+        <span class="fw-bold">Cybersecurity</span>
+        <span class="fw-bold">Desktop Apps <i class="bi bi-chevron-right"></i></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Cards Section -->
+  <section class="project-card-section">
+    <div class="project-card-wrapper">
+      <div class="project-card-row">
+        <!-- Card 1 -->
+        <div class="project-card">
+          <img src="Image_1.svg" alt="Project 1" class="project-card-img">
+          <div class="project-card-body">
+            <div>
+              <p class="project-card-title">Home Structure of Computer Vision</p>
+              <div class="project-card-category">AI & Data Science</div>
+            </div>
+            <!-- Garis pemisah di dalam card -->
+            <svg class="project-card-divider" xmlns="http://www.w3.org/2000/svg" width="100%" height="1" viewBox="0 0 400 1" fill="none">
+              <path d="M0 0.5L400 0.5" stroke="#C4C4C4"/>
+            </svg>
+            <p class="project-card-desc">
+              An AI platform that uses computer vision to analyze photos of a room, allowing users to visualize interior design changes.
+            </p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="project-card">
+          <img src="Image_2.svg" alt="Project 2" class="project-card-img">
+          <div class="project-card-body">
+            <div>
+              <p class="project-card-title">Dynamic Wildlife Website</p>
+              <div class="project-card-category">Website</div>
+            </div>
+            <!-- Garis pemisah di dalam card -->
+            <svg class="project-card-divider" xmlns="http://www.w3.org/2000/svg" width="100%" height="1" viewBox="0 0 400 1" fill="none">
+              <path d="M0 0.5L400 0.5" stroke="#C4C4C4"/>
+            </svg>
+            <p class="project-card-desc">
+              An interactive and educational website showcasing global wildlife.
+            </p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="project-card">
+          <img src="Image_3.svg" alt="Project 3" class="project-card-img">
+          <div class="project-card-body">
+            <div>
+              <p class="project-card-title">Magnificent Snake</p>
+              <div class="project-card-category">Game</div>
+            </div>
+            <!-- Garis pemisah di dalam card -->
+            <svg class="project-card-divider" xmlns="http://www.w3.org/2000/svg" width="100%" height="1" viewBox="0 0 400 1" fill="none">
+              <path d="M0 0.5L400 0.5" stroke="#C4C4C4"/>
+            </svg>
+            <p class="project-card-desc">
+              A modern reimagining of the classic snake game, built with 3D graphics. Players navigate a snake through a three-dimensional space to collect items.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="project-card-row">
+        <!-- Card 4 -->
+        <div class="project-card">
+          <img src="Image_4.svg" alt="Project 4" class="project-card-img">
+          <div class="project-card-body">
+            <div>
+              <p class="project-card-title">Netflix Clone</p>
+              <div class="project-card-category">Desktop</div>
+            </div>
+            <!-- Garis pemisah di dalam card -->
+            <svg class="project-card-divider" xmlns="http://www.w3.org/2000/svg" width="100%" height="1" viewBox="0 0 400 1" fill="none">
+              <path d="M0 0.5L400 0.5" stroke="#C4C4C4"/>
+            </svg>
+            <p class="project-card-desc">
+              A front-end project that replicates the user interface and core Browse experience of the Netflix streaming service.
+            </p>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="project-card">
+          <img src="Image_5.svg" alt="Project 5" class="project-card-img">
+          <div class="project-card-body">
+            <div>
+              <p class="project-card-title">Data Learning Model</p>
+              <div class="project-card-category">Machine Learning</div>
+            </div>
+            <!-- Garis pemisah di dalam card -->
+            <svg class="project-card-divider" xmlns="http://www.w3.org/2000/svg" width="100%" height="1" viewBox="0 0 400 1" fill="none">
+              <path d="M0 0.5L400 0.5" stroke="#C4C4C4"/>
+            </svg>
+            <p class="project-card-desc">
+              A machine learning model designed to analyze and extract insights from a specific dataset. It is trained to identify patterns.
+            </p>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="project-card">
+          <img src="Image_6.svg" alt="Project 6" class="project-card-img">
+          <div class="project-card-body">
+            <div>
+              <p class="project-card-title">Superbank System</p>
+              <div class="project-card-category">Backend System</div>
+            </div>
+            <!-- Garis pemisah di dalam card -->
+            <svg class="project-card-divider" xmlns="http://www.w3.org/2000/svg" width="100%" height="1" viewBox="0 0 400 1" fill="none">
+              <path d="M0 0.5L400 0.5" stroke="#C4C4C4"/>
+            </svg>
+            <p class="project-card-desc">
+              A comprehensive and secure core banking system designed for modern financial institutions.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="project-card-row">
+        <!-- Card 7 -->
+        <div class="project-card">
+          <img src="Image_7.svg" alt="Project 7" class="project-card-img">
+          <div class="project-card-body">
+            <div>
+              <p class="project-card-title">Samantha Krida Brands</p>
+              <div class="project-card-category">UI/UX Design</div>
+            </div>
+            <!-- Garis pemisah di dalam card -->
+            <svg class="project-card-divider" xmlns="http://www.w3.org/2000/svg" width="100%" height="1" viewBox="0 0 400 1" fill="none">
+              <path d="M0 0.5L400 0.5" stroke="#C4C4C4"/>
+            </svg>
+            <p class="project-card-desc">
+              An UI design portfolio website and e-commerce platform for "Samantha Krida", a brand specializing in cultural or artisanal products.
+            </p>
+          </div>
+        </div>
+        <!-- Card 8 -->
+        <div class="project-card">
+          <img src="Image_8.svg" alt="Project 8" class="project-card-img">
+          <div class="project-card-body">
+            <div>
+              <p class="project-card-title">Trello Antiviruses</p>
+              <div class="project-card-category">Cybersecurity</div>
+            </div>
+            <!-- Garis pemisah di dalam card -->
+            <svg class="project-card-divider" xmlns="http://www.w3.org/2000/svg" width="100%" height="1" viewBox="0 0 400 1" fill="none">
+              <path d="M0 0.5L400 0.5" stroke="#C4C4C4"/>
+            </svg>
+            <p class="project-card-desc">
+              A project management template or power-up for Trello, specifically designed for cybersecurity teams. It helps track virus and manage threat analysis.
+            </p>
+          </div>
+        </div>
+        <!-- Card 9 -->
+        <div class="project-card">
+          <img src="Image_9.svg" alt="Project 9" class="project-card-img">
+          <div class="project-card-body">
+            <div>
+              <p class="project-card-title">Green Edutech</p>
+              <div class="project-card-category">Mobile App</div>
+            </div>
+            <!-- Garis pemisah di dalam card -->
+            <svg class="project-card-divider" xmlns="http://www.w3.org/2000/svg" width="100%" height="1" viewBox="0 0 400 1" fill="none">
+              <path d="M0 0.5L400 0.5" stroke="#C4C4C4"/>
+            </svg>
+            <p class="project-card-desc">
+              Green Edutech is an interactive mobile learning platform designed to educate users of all ages about environmental conservation and sustainability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="footer-top-line"></div>
+    <div class="container py-4">
+      <div class="row justify-content-between align-items-start">
+        <!-- Logo + Social Media -->
+        <div class="col-sm-6 col-md-3 mb-4">
+          <img src="LOGO WARNA.svg" alt="Logo" width="65" class="mb-3">
+          <h6><strong>Connect With Us</strong></h6>
+          <div class="social-icons d-flex gap-3 mt-3 flex-wrap">
+            <a href="#"><img src="Instagram.svg" alt="Instagram" width="30"></a>
+            <a href="#"><img src="LinkedIn.svg" alt="LinkedIn" width="30"></a>
+            <a href="#"><img src="GitHub.svg" alt="GitHub" width="30"></a>
+          </div>
+          <div class="social-icons d-flex gap-3 mt-3 flex-wrap">
+            <a href="#"><img src="YouTube.svg" alt="YouTube" width="30"></a>
+            <a href="#"><img src="Discord.svg" alt="Discord" width="30"></a>
+          </div>
+        </div>
+        <!-- Navigation -->
+        <div class="col-sm-6 col-md-2 pt-2">
+          <h6><strong>Navigation</strong></h6>
+          <ul class="list-unstyled mt-2">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Creators</a></li>
+          </ul>
+        </div>
+        <!-- Visit -->
+        <div class="col-sm-6 col-md-2 pt-2">
+          <h6 class="mb-2"><strong>Visit</strong></h6>
+          <ul class="list-unstyled mb-0">
+            <li><a href="https://www.ub.ac.id/id/" target="_blank">Universitas Brawijaya</a></li>
+            <li><a href="https://filkom.ub.ac.id/" target="_blank">FILKOM Official</a></li>
+            <li><a href="https://filkom.ub.ac.id/layanan-fasilitas/filkom-apps/" target="_blank">FILKOM Apps</a></li>
+            <li><a href="https://halofilkom.ub.ac.id/?lang=id" target="_blank">HaloFilkom</a></li>
+            <li><a href="https://brone.ub.ac.id/" target="_blank">Brone</a></li>
+          </ul>
+        </div>
+        <!-- Find Us -->
+        <div class="col-sm-6 col-md-3 pt-2">
+          <h6><strong>Find us</strong></h6>
+          <p class="mt-2 mb-0">Malang, East Java, Indonesia</p>
+          <a href="https://maps.app.goo.gl/tVWhrCbyJqKtrL7x7" target="_blank" class="text-primary">View on Maps</a>
+        </div>
+      </div>
+      <hr class="footer-bottom-line my-4">
+      <p class="text-center small mb-0"> &copy; 2025 FILKOM PLAYGROUND</p>
+    </div>
+  </footer>
+</body>
+</html>
