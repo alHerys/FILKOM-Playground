@@ -182,8 +182,16 @@ font-family: 'Quicksand', sans-serif;
     color: #fff !important;
 }
 
+#mainNavbar .navbar-brand img {
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: contain;
+    margin-right: 0px !important;
+    transition: filter 0s;
+}
+
 #mainNavbar .navbar-brand span {
-    margin-left: 12px;
+    margin-left: 0px !important;
 }
 
 /* Memastikan selector sesuai dengan logo di navbar */
@@ -191,7 +199,7 @@ font-family: 'Quicksand', sans-serif;
     width: 50px !important;
     height: 50px !important;
     object-fit: contain;
-    margin-right: 10px;
+    margin-right: 2px;
     transition: filter 0s;
 }
 
@@ -299,7 +307,7 @@ font-family: 'Quicksand', sans-serif;
     width: 50px !important;
     height: 50px !important;
     object-fit: contain;
-    margin-right: 10px;
+    margin-right: 2px !important;
     transition: filter 0s;
 }
 
