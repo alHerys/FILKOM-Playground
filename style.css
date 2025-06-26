@@ -397,14 +397,14 @@ font-family: 'Quicksand', sans-serif;
 /* Hero Section Background SVG */
 .hero-project-section {
   position: relative;
-  overflow: hidden; /* Cegah scroll horizontal */
+  overflow: hidden;
 }
 
 .hero-bg-svg {
   position: absolute;
-  top: -250px;
+  top: -270px;
   left: 30%;
-  width: 140vw;         /* Hanya selebar viewport */
+  width: 140vw;
   max-width: 2200px;
   min-width: 100vw;
   height: auto;
@@ -419,7 +419,7 @@ font-family: 'Quicksand', sans-serif;
   max-width: 1440px;
   min-width: 0;
   height: auto;
-  padding: 20px 70px 76px 70px;
+  padding: 0px 70px 76px 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -440,37 +440,36 @@ font-family: 'Quicksand', sans-serif;
   width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 50px;
   justify-content: center;
 }
 
 .project-card {
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 16px;
+  background: white;
+  border: 1px solid rgba(167, 159, 159, 0.631);
+  border-radius: 15px;
   overflow: hidden;
-  width: 400px;
-  min-width: 0;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 8px rgba(30,57,77,0.04);
+  box-shadow: 0 2px 8px rgba(53, 60, 66, 0.04);
   transition: box-shadow 0.2s;
 }
 
 .project-card:hover {
-  box-shadow: 0 8px 24px rgba(30,57,77,0.10);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .project-card-img {
   display: flex;
-  width: 400px;
-  height: 308px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  border-radius: 10px 10px 0 0;
+  width: 100%;
+  max-width: 400px; /* sama dengan max-width card */
+  height: 280px;
   object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  display: block;
 }
 
 .project-card-body {
@@ -606,8 +605,8 @@ font-family: 'Quicksand', sans-serif;
 }
 
 #mainNavbar .container-fluid {
-  padding-left: 107px;
-  padding-right: 107px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 @media (max-width: 991.98px) {
@@ -623,4 +622,128 @@ font-family: 'Quicksand', sans-serif;
 
 #mainNavbar .navbar-nav {
   margin-right: 20px;
+}
+
+/* Tambahkan gap antar menu navbar */
+#mainNavbar .navbar-nav {
+  gap: 45px;
+}
+
+@media (max-width: 991.98px) {
+  #mainNavbar .navbar-nav {
+    gap: 16px;
+  }
+}
+
+.category-scroll-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto 32px auto;
+  display: flex;
+  align-items: center;
+  /* overflow: visible; */
+}
+
+/* Pastikan kategori tetap satu baris */
+.project-category-filter-scroll {
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 12px 0 12px 0;
+  padding-right: 48px;
+  padding-left: 48px;
+  scroll-behavior: smooth;
+  flex: 1;
+  white-space: nowrap;
+}
+.project-category-filter-scroll > span {
+  white-space: nowrap;
+}
+
+.desktop-apps-arrow {
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #222;
+  white-space: nowrap;
+  gap: 0;
+}
+.category-fade {
+  color: #ffffff;
+  font-weight: bold;
+  margin-left: 0;
+}
+.category-arrow {
+  color: #222;
+  font-size: 2rem;
+  margin-left: 6px;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+}
+
+/* Panah kiri & kanan tanpa kotak */
+.category-scroll-arrow {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  padding: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: color 0.2s ease, background 0.2s, border-radius 0.2s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Posisi panah */
+.category-scroll-arrow.left {
+  left: 0;
+}
+.category-scroll-arrow.right {
+  right: 0;
+}
+
+/* Gradasi putih di ujung scroll (kanan) */
+.category-scroll-wrapper::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
+  background: linear-gradient(to left, #fff 80%, transparent 100%);
+  z-index: 2;
+}
+
+/* Gradasi putih di ujung scroll (kiri) */
+.category-scroll-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
+  background: linear-gradient(to right, #fff 80%, transparent 100%);
+  z-index: 2;
+}
+
+.category-scroll-arrow:hover {
+  background: #ededed;
+  border-radius: 50%;
+  transition: background 0.2s, border-radius 0.2s;
 }

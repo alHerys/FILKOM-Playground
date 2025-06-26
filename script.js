@@ -34,4 +34,46 @@ document.addEventListener("DOMContentLoaded", function () {
         sideMenu.classList.remove('active');
       }
     });
+
+    const scrollContainer = document.querySelector('.project-category-filter-scroll');
+    const btnLeft = document.querySelector('.category-scroll-arrow.left');
+    const btnRight = document.querySelector('.category-scroll-arrow.right');
+
+    function updateArrows() {
+      if (!scrollContainer) return;
+      // Toleransi 2px untuk bug browser
+      const scrollLeft = Math.round(scrollContainer.scrollLeft);
+      const maxScroll = Math.round(scrollContainer.scrollWidth - scrollContainer.clientWidth);
+
+      if (scrollLeft <= 2) {
+        btnLeft.style.display = 'none';
+      } else {
+        btnLeft.style.display = 'flex';
+      }
+
+      if (scrollLeft >= maxScroll - 2) {
+        btnRight.style.display = 'none';
+      } else {
+        btnRight.style.display = 'flex';
+      }
+    }
+
+    if (btnLeft && btnRight && scrollContainer) {
+      // Inisialisasi
+      updateArrows();
+
+      // Scroll dengan tombol
+      btnLeft.addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: -200, behavior: 'smooth' });
+      });
+      btnRight.addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: 200, behavior: 'smooth' });
+      });
+
+      // Update panah saat scroll
+      scrollContainer.addEventListener('scroll', updateArrows);
+
+      // Update panah saat resize (jika lebar berubah)
+      window.addEventListener('resize', updateArrows);
+    }
 });
