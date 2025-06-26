@@ -92,7 +92,10 @@ font-family: 'Quicksand', sans-serif;
 }
 
 .hero-title {
-    margin-bottom: 8px;
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1px;
 }
 
 /* Responsive Footer for Tablet (split screen) */
@@ -498,10 +501,10 @@ font-family: 'Quicksand', sans-serif;
 }
 
 .project-card-body {
-    padding: 18px 20px 18px 20px;
+    padding: 12px 16px 10px 16px;
+    gap: 4px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
     flex: 1;
 }
 
@@ -535,6 +538,13 @@ font-family: 'Quicksand', sans-serif;
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
+}
+
+.project-card-text {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 @media (max-width: 767.98px) {
@@ -655,7 +665,7 @@ font-family: 'Quicksand', sans-serif;
 
 /* gap antar menu navbar */
 #mainNavbar .navbar-nav {
-  gap: 45px;
+  gap: 55px;
 }
 
 @media (max-width: 991.98px) {
@@ -774,7 +784,250 @@ font-family: 'Quicksand', sans-serif;
 }
 
 .category-scroll-arrow:hover {
-    background: black;
+    background: #dedede;
     border-radius: 50%;
     transition: background 0.2s, border-radius 0.2s;
+} 
+
+.profile-header-container {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 40px;
+  z-index: 1;
+}
+
+/* Banner */
+.profile-banner-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 50px auto;
+  z-index: 1;
+}
+
+.profile-banner-img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: block;
+}
+
+/* Foto bulat di depan banner */
+.profile-photo-circle {
+  position: absolute;
+  left: 17%;
+  bottom: -70px;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  object-fit: cover;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  background: #fff;
+  z-index: 2;
+}
+
+/* Samakan padding dengan navbar */
+.profile-header-container,
+.profile-banner-wrapper {
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 991.98px) {
+  .profile-header-container,
+  .profile-banner-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Agar banner full sejajar, hilangkan max-width jika ingin benar-benar rata */
+.profile-header-container,
+.profile-banner-wrapper {
+  max-width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+  .profile-header-container {
+    padding-top: 16px;
+  }
+  .profile-banner-img {
+    height: 120px;
+    border-radius: 10px;
+  }
+  .profile-photo-circle {
+    width: 80px;
+    height: 80px;
+    border-width: 4px;
+    bottom: -32px;
+  }
+}
+
+.bg-decor-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Responsif: profile-info-section agar tidak terlalu ke tengah di desktop lebar */
+@media (min-width: 1200px) {
+  .profile-info-section {
+    margin-left: 80px;
+    margin-right: auto;
+    max-width: 700px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Responsif: di tablet dan mobile tetap nyaman */
+@media (max-width: 1199.98px) {
+  .profile-info-section {
+    margin-left: 32px;
+    margin-right: 32px;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .profile-info-section {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px 8px 0 8px;
+    max-width: 100%;
+  }
+}
+
+/* Profile Info Section */
+.profile-info-section {
+  max-width: 800px;
+  margin: 60px 0 0 130px;
+  padding: 60px 0 0 50px;
+  background: transparent;
+  text-align: left;
+}
+
+.profile-name {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  letter-spacing: -1px;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 15px;
+}
+
+.profile-stat-number {
+  font-size: 25px;
+  font-weight: 700;
+  display: block;
+}
+
+.profile-stat-label {
+  font-size: 1.1rem;
+  color: #444;
+  margin-top: 1px;
+}
+
+.profile-categories {
+  margin-bottom: 30px;
+}
+
+.profile-category {
+  display: inline-block;
+  border: 1px solid #000000;
+  border-radius: 7px;
+  padding: 2px 6px;
+  font-size: 0.56rem;
+  margin: 0 6px 8px 0;
+  background: white;
+  color: #000000;
+}
+
+.profile-bio-title {
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: #888;
+  margin-bottom: 15px;
+  font-family: 'Quicksand', sans-serif;
+  opacity: 0.8;
+}
+
+.profile-bio p {
+  margin-bottom: 16px;
+  color: #333;
+  font-size: 1.2rem;
+  font-family: 'Quicksand', sans-serif;
+  max-width: 100%;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  text-align: justify;
+}
+
+.profile-info-section {
+  max-width: 925px;
+}
+
+.profile-links-title {
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: #888;
+  margin-bottom: 8px;
+  font-family: 'Quicksand', sans-serif;
+  opacity: 0.8;
+}
+
+.profile-social-icons {
+  display: flex;
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.profile-social-icons a {
+  color: #515151;
+  font-size: 1.7rem;
+  transition: color 0.2s;
+}
+
+.profile-social-icons a:hover {
+  color: #007bff;
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+  .profile-info-section {
+    padding: 20px 8px 0 8px;
+    margin-top: 40px;
+  }
+  .profile-name {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .profile-stats {
+    gap: 24px;
+  }
+  .profile-category {
+    font-size: 0.95rem;
+    padding: 3px 10px;
+  }
+  .profile-social-icons a {
+    font-size: 1.5rem;
+  }
 }
