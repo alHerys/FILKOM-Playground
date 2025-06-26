@@ -673,105 +673,108 @@ font-family: 'Quicksand', sans-serif;
     align-items: center;
 }
 
-/* Pastikan kategori tetap satu baris */
+/* kategori tetap satu baris */
 .project-category-filter-scroll {
-  display: flex;
-  gap: 32px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding: 12px 0 12px 0;
-  padding-right: 48px;
-  padding-left: 48px;
-  scroll-behavior: smooth;
-  flex: 1;
-  white-space: nowrap;
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 12px 0 12px 0;
+    padding-right: 48px;
+    padding-left: 48px;
+    scroll-behavior: smooth;
+    flex: 1;
+    white-space: nowrap;
 }
+
 .project-category-filter-scroll > span {
-  white-space: nowrap;
+    white-space: nowrap;
 }
 
 .desktop-apps-arrow {
-  display: inline-flex;
-  align-items: center;
-  font-weight: bold;
-  font-size: 1.25rem;
-  color: #222;
-  white-space: nowrap;
-  gap: 0;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #222;
+    white-space: nowrap;
+    gap: 0;
 }
+
 .category-fade {
-  color: #ffffff;
-  font-weight: bold;
-  margin-left: 0;
+    color: white;
+    font-weight: bold;
+    margin-left: 0;
 }
 .category-arrow {
-  color: #222;
-  font-size: 2rem;
-  margin-left: 6px;
-  font-weight: normal;
-  display: flex;
-  align-items: center;
+    color: #222;
+    font-size: 2rem;
+    margin-left: 6px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
 }
 
 /* Panah kiri & kanan tanpa kotak */
 .category-scroll-arrow {
-  background: none;
-  border: none;
-  font-size: 1rem;
-  color: black;
-  cursor: pointer;
-  padding: 8px;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3;
-  transition: color 0.2s ease, background 0.2s, border-radius 0.2s;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: black;
+    cursor: pointer;
+    padding: 8px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    transition: color 0.2s ease, background 0.2s, border-radius 0.2s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Posisi panah */
 .category-scroll-arrow.left {
-  left: 0;
+    left: 0;
 }
+
 .category-scroll-arrow.right {
-  right: 0;
+    right: 0;
 }
 
 /* Gradasi putih di ujung scroll (kanan) */
 .category-scroll-wrapper::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
-  pointer-events: none;
-  background: linear-gradient(to left, #fff 80%, transparent 100%);
-  z-index: 2;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    pointer-events: none;
+    background: linear-gradient(to left, #fff 80%, transparent 100%);
+    z-index: 2;
 }
 
 /* Gradasi putih di ujung scroll (kiri) */
 .category-scroll-wrapper::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
-  pointer-events: none;
-  background: linear-gradient(to right, #fff 80%, transparent 100%);
-  z-index: 2;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    pointer-events: none;
+    background: linear-gradient(to right, #fff 80%, transparent 100%);
+    z-index: 2;
 }
 
 .category-scroll-arrow:hover {
-  background: black;
-  border-radius: 50%;
-  transition: background 0.2s, border-radius 0.2s;
+    background: black;
+    border-radius: 50%;
+    transition: background 0.2s, border-radius 0.2s;
 }
