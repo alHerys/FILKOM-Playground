@@ -444,8 +444,8 @@ font-family: 'Quicksand', sans-serif;
 
 .hero-bg-svg-cr {
   position: absolute;
-  margin-top: -235px;
-  margin-left: -50px;
+  margin-top: -180px;
+  margin-left: -20px;
   top: 0;
   left: 0;
   width: 115vw;   /* ⬅️ Mengisi seluruh lebar layar */
@@ -614,7 +614,7 @@ font-family: 'Quicksand', sans-serif;
     width: 70%;
     margin-top: -60px;
     margin-bottom: 75px;
-    margin-right: 10px;
+    margin-right: 28px;
 }
 
 #custom-ex {
@@ -690,12 +690,12 @@ font-family: 'Quicksand', sans-serif;
 }
 
 .jargon {
-    margin-left: 20px;
+    margin-left: 53px;
 }
 
 #mainNavbar .container-fluid {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 85px;
+    padding-right: 85px;
 }
 
 @media (max-width: 991.98px) {
@@ -1104,7 +1104,7 @@ font-family: 'Quicksand', sans-serif;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   padding: 20px;
-  width: 620px;
+  width: 580px;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
@@ -1164,7 +1164,7 @@ font-family: 'Quicksand', sans-serif;
 
 .project-images img {
   width: 50%;
-  height: 200px;
+  height: 180px;
   border-radius: 10px;
   object-fit: cover;
   margin: 10px 3px 3px 3px;
