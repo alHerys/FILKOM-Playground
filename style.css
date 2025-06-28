@@ -898,7 +898,6 @@ font-family: 'Quicksand', sans-serif;
   }
 }
 
-/* Agar banner full sejajar, hilangkan max-width jika ingin benar-benar rata */
 .profile-header-container,
 .profile-banner-wrapper {
   max-width: 100%;
