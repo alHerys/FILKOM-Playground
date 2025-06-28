@@ -442,6 +442,19 @@ font-family: 'Quicksand', sans-serif;
     user-select: none;
 }
 
+.hero-bg-svg-cr {
+  position: absolute;
+  margin-top: -235px;
+  margin-left: -50px;
+  top: 0;
+  left: 0;
+  width: 115vw;   /* ⬅️ Mengisi seluruh lebar layar */
+  height: auto;   /* ⬅️ Menjaga rasio tinggi */
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
 .project-card-section {
     width: 100%;
     max-width: 1440px;
@@ -597,10 +610,35 @@ font-family: 'Quicksand', sans-serif;
     margin-bottom: 30px;
 }
 
-.search-bar-custom {
+#custom-cr {
+    width: 70%;
+    margin-top: -60px;
+    margin-bottom: 75px;
+    margin-right: 10px;
+}
+
+#custom-ex {
     width: 85%;
+}
+
+.search-bar-custom {
     max-width: 1100px;
     margin: 35px auto 1.5rem auto;
+}
+
+#group-ex {
+    width: 100%;
+}
+
+#group-cr {
+    width: 55%;
+}
+
+.search-bar-group {
+    border-radius: 15px;
+    border: 1px solid black;
+    overflow: hidden;
+    background: white;
 }
 
 .search-bar-group {
@@ -623,11 +661,19 @@ font-family: 'Quicksand', sans-serif;
     align-items: center;
 }
 
+#input-ex {
+    font-size: 1.1rem;
+    padding: 0.9rem 20px 0.9rem 0;
+}
+
+#input-cr {
+    font-size: 0.9rem;
+    padding: 0.7rem 17px 0.7rem 0;
+}
+
 .search-bar-input {
     border: none;
     border-radius: 0 15px 2rem 0;
-    font-size: 1.1rem;
-    padding: 0.9rem 20px 0.9rem 0;
     background: white;
     color: black;
     box-shadow: none;
@@ -641,6 +687,10 @@ font-family: 'Quicksand', sans-serif;
 
 .hero-project-section .container {
     padding-top: 0;
+}
+
+.jargon {
+    margin-left: 20px;
 }
 
 #mainNavbar .container-fluid {
@@ -1030,4 +1080,122 @@ font-family: 'Quicksand', sans-serif;
   .profile-social-icons a {
     font-size: 1.5rem;
   }
+}
+
+/* creator cards */
+#container-creators {
+  max-width: 1200px;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+#card-left {
+    margin-left: -175px;
+}
+
+#card-right {
+    margin-right: -175px;
+}
+
+.creator-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 20px;
+  width: 620px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.creator-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+}
+
+.creator-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.profile-img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.creator-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.creator-info p {
+  margin: 3px 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 3px 7px;
+  border-radius: 6px;
+  color: #fff;
+  margin-left: 8px;
+}
+
+.badge.blue {
+  background: #4da7f3;
+}
+
+.badge.orange {
+  background: #f57c00;
+}
+
+.project-images {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.project-images img {
+  width: 50%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: 10px 3px 3px 3px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags span {
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  border: 1px solid #999;
+}
+
+#footer-creators {
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .creator-card {
+    width: 100%;
+  }
+}
+
+a.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Supaya seluruh card bisa diklik */
 }
