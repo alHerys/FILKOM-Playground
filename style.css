@@ -170,10 +170,13 @@ font-family: 'Quicksand', sans-serif;
 }
 
 #mainNavbar {
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     background-color: transparent;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    min-height: 56px;
 }
 
 #mainNavbar.scrolled {
@@ -200,6 +203,20 @@ font-family: 'Quicksand', sans-serif;
 #mainNavbar.scrolled.navbar-darktext .navbar-brand span,
 #mainNavbar.scrolled.navbar-darktext .navbar-nav .nav-link {
     color: white !important;
+}
+
+#mainNavbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#mainNavbar .navbar-brand img {
+    width: 40px !important;
+    height: 40px !important;
+    margin-right: 8px;
 }
 
 #mainNavbar .navbar-brand span {
@@ -702,8 +719,8 @@ font-family: 'Quicksand', sans-serif;
 
 @media (max-width: 991.98px) {
     #mainNavbar .container-fluid {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 }
 
