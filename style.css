@@ -1093,6 +1093,7 @@ font-family: 'Quicksand', sans-serif;
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
+  margin-bottom: 50px;
   justify-content: center;
 }
 
