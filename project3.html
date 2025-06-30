@@ -58,29 +58,31 @@
   
   <!-- Hero Project Section -->
   <section class="pt-5 hero-project-section" style="background:transparent;position:relative;z-index:1;">
-    <!-- Background SVG -->
-    <img src="Creators List Header Background.png" alt="Project Header Background"
-         class="hero-bg-svg-cr">
-    <!-- Content -->
-    <div class="container text-start" style="padding-top:100px; position:relative; z-index:1;">
-      <div class="jargon">
-        <h1 class="fw-bold mb-4" style="font-size:2.5rem;">
-          OUR AMAZING CREATORS
-        </h1>
-        <h1 class="fw-light mb-4" style="font-size:2rem;">
-          <span style="color:#F5680F;">Meet</span> our most <span style="color:#16B3F7;">talented</span> and <br> <span style="color:#2B5BA7;">accomplished</span> people
-        </h1>
+    <img src="Creators List Header Background.png" alt="Project Header Background" class="hero-bg-svg-cr">
+    <div id="content-cr" class="container" style="padding-top:100px; position:relative; z-index:1;">
+      <div class="row align-items-center">
+        <!-- Left side: Headings -->
+        <div class="col-lg-7 col-md-12 mb-4 mb-lg-0 text-lg-start text-center">
+          <h1 class="fw-bold mb-3 responsive-heading">OUR AMAZING CREATORS</h1>
+          <h4 class="fw-semibold mb-4 responsive-subheading">
+            <span style="color:#F5680F;">Meet</span> our most <span style="color:#16B3F7;">talented</span> and <br class="d-none d-lg-block"> <span style="color:#2B5BA7;">accomplished</span> people
+          </h4>
+        </div>
+
+        <!-- Right side: Search bar -->
+        <div class="col-lg-5 col-md-12">
+          <form id="custom-cr" class="search-bar-custom d-flex justify-content-center justify-content-lg-end w-100">
+            <div class="input-group search-bar-group w-100">
+              <span class="input-group-text search-bar-icon">
+                <i class="bi bi-search"></i>
+              </span>
+              <input id="input-cr" class="form-control search-bar-input" type="search" placeholder="Search Creators by Name" aria-label="Search">
+            </div>
+          </form>
+        </div>
       </div>
 
-      <form id="custom-cr" class="search-bar-custom d-flex justify-content-end mb-5">
-        <div id="custom-cr" class="input-group search-bar-group">
-          <span class="input-group-text search-bar-icon">
-            <i class="bi bi-search"></i>
-          </span>
-          <input id="input-cr" class="form-control search-bar-input" type="search" placeholder="Search Creators by Name" aria-label="Search">
-        </div>
-      </form>
-      <div class="category-scroll-wrapper">
+      <div class="category-scroll-wrapper" style="margin-top: 95px;">
         <button class="category-scroll-arrow left">
           <i class="bi bi-chevron-left"></i>
         </button>
@@ -103,190 +105,226 @@
     </div>
   </section>
 
+
   <!-- Creators Cards Section --> 
-  <a href="project5.html" class="card-link"></a>
   <div id="container-creators" class="container">
-    <a href="project5.html" class="card-link">
-      <div id="card-left" class="creator-card justify-content-start">
-        <div class="creator-header">
-          <img src="Daniel.svg" alt="Profile" class="profile-img">
-          <div class="creator-info">
-            <h3>Daniel Smite Manalu <span class="badge blue">Most Projects</span></h3>
-            <p><i class="bi bi-mortarboard"></i> Information Technology</p>
-            <p><i class="bi bi-check-circle"></i> 53 Projects &nbsp;&nbsp; <i class="bi bi-award"></i> 15 Achievements</p>
+    <div class="row justify-content-center g-4">
+      <!-- Card 1 -->
+      <div class="col-lg-6 col-md-8 col-sm-12">
+        <a href="project5.html" class="card-link">
+          <div id="card-left" class="creator-card justify-content-start">
+            <div class="creator-header">
+              <img src="Daniel.svg" alt="Profile" class="profile-img">
+              <div class="creator-info">
+                <h3>Daniel Smite Manalu <span class="badge blue">Most Projects</span></h3>
+                <p><i class="bi bi-mortarboard"></i> Information Technology</p>
+                <p><i class="bi bi-check-circle"></i> 53 Projects &nbsp;&nbsp; <i class="bi bi-award"></i> 15 Achievements</p>
+              </div>
+            </div>
+            <div class="project-images">
+              <img src="Image_1.svg" alt="Project 1">
+              <img src="Image_2.svg" alt="Project 2">
+            </div>
+            <div class="tags">
+              <span>Mobile App</span>
+              <span>Website</span>
+              <span>Game</span>
+              <span>UI/UX Design</span>
+              <span>+2</span>
+            </div>
           </div>
-        </div>
-        <div class="project-images">
-          <img src="Image_1.svg" alt="Project 1">
-          <img src="Image_2.svg" alt="Project 2">
-        </div>
-        <div class="tags">
-          <span>Mobile App</span>
-          <span>Website</span>
-          <span>Game</span>
-          <span>UI/UX Design</span>
-          <span>+2</span>
-        </div>
+        </a>
       </div>
-    </a>
-    <a href="project5.html" class="card-link">
-      <div id="card-right" class="creator-card justify-content-end">
-        <div class="creator-header">
-          <img src="Husein.svg" alt="Profile" class="profile-img">
-          <div class="creator-info">
-            <h3>Husein S. Muhammad <span class="badge orange">Most Achievements</span></h3>
-            <p><i class="bi bi-mortarboard"></i> Information Technology</p>
-            <p><i class="bi bi-check-circle"></i> 33 Projects &nbsp;&nbsp; <i class="bi bi-award"></i> 20 Achievements</p>
+
+      <!-- Card 2 -->
+      <div class="col-lg-6 col-md-8 col-sm-12">
+        <a href="project5.html" class="card-link">
+          <div id="card-right" class="creator-card justify-content-end">
+            <div class="creator-header">
+              <img src="Husein.svg" alt="Profile" class="profile-img">
+              <div class="creator-info">
+                <h3>Husein S. Muhammad <span class="badge orange">Most Achievements</span></h3>
+                <p><i class="bi bi-mortarboard"></i> Information Technology</p>
+                <p><i class="bi bi-check-circle"></i> 33 Projects &nbsp;&nbsp; <i class="bi bi-award"></i> 20 Achievements</p>
+              </div>
+            </div>
+            <div class="project-images">
+              <img src="Image_3.svg" alt="Project 1">
+              <img src="Image_4.svg" alt="Project 2">
+            </div>
+            <div class="tags">
+              <span>AI & Data Science</span>
+              <span>Website</span>
+              <span>Game</span>
+              <span>UI/UX Design</span>
+            </div>
           </div>
-        </div>
-        <div class="project-images">
-          <img src="Image_3.svg" alt="Project 1">
-          <img src="Image_4.svg" alt="Project 2">
-        </div>
-        <div class="tags">
-          <span>AI & Data Science</span>
-          <span>Website</span>
-          <span>Game</span>
-          <span>UI/UX Design</span>
-        </div>
+        </a>
       </div>
-    </a>
+    </div>
   </div>
 
   <div id="container-creators" class="container">
-    <a href="project5.html" class="card-link">
-      <div id="card-left" class="creator-card not-most justify-content-start">
-        <div class="creator-header">
-          <img src="Hery.svg" alt="Profile" class="profile-img">
-          <div class="creator-info">
-            <h3>Alvianto Hery Sarborn</h3>
-            <p><i class="bi bi-mortarboard"></i> Information Technology</p>
-            <p><i class="bi bi-check-circle"></i> 15 Projects &nbsp;&nbsp; <i class="bi bi-award"></i> 3 Achievements</p>
+    <div class="row justify-content-center g-4">
+      <!-- Card 1 -->
+      <div class="col-lg-6 col-md-8 col-sm-12">
+        <a href="project5.html" class="card-link">
+          <div id="card-left" class="creator-card not-most justify-content-start">
+            <div class="creator-header">
+              <img src="Hery.svg" alt="Profile" class="profile-img">
+              <div class="creator-info">
+                <h3>Alvianto Hery Sarborn</h3>
+                <p><i class="bi bi-mortarboard"></i> Information Technology</p>
+                <p><i class="bi bi-check-circle"></i> 15 Projects &nbsp;&nbsp; <i class="bi bi-award"></i> 3 Achievements</p>
+              </div>
+            </div>
+            <div class="project-images">
+              <img src="Image_5.svg" alt="Project 1">
+              <img src="Image_6.svg" alt="Project 2">
+            </div>
+            <div class="tags">
+              <span>Mobile App</span>
+              <span>Website</span>
+              <span>Backend System</span>
+              <span>UI/UX Design</span>
+            </div>
           </div>
-        </div>
-        <div class="project-images">
-          <img src="Image_5.svg" alt="Project 1">
-          <img src="Image_6.svg" alt="Project 2">
-        </div>
-        <div class="tags">
-          <span>Mobile App</span>
-          <span>Website</span>
-          <span>Backend System</span>
-          <span>UI/UX Design</span>
-        </div>
+        </a>
       </div>
-    </a>
-    <a href="project5.html" class="card-link">
-      <div id="card-right" class="creator-card not-most justify-content-end">
-        <div class="creator-header">
-          <img src="Ezekiel.svg" alt="Profile" class="profile-img">
-          <div class="creator-info">
-            <h3>Ezekiel Aaron Marmora</h3>
-            <p><i class="bi bi-mortarboard"></i> Information Technology</p>
-            <p><i class="bi bi-check-circle"></i> 20 Projects &nbsp;&nbsp; <i class="bi bi-award"></i> 6 Achievements</p>
+
+      <!-- Card 2 -->
+      <div class="col-lg-6 col-md-8 col-sm-12">
+        <a href="project5.html" class="card-link">
+          <div id="card-right" class="creator-card not-most justify-content-end">
+            <div class="creator-header">
+              <img src="Ezekiel.svg" alt="Profile" class="profile-img">
+              <div class="creator-info">
+                <h3>Ezekiel Aaron Marmora</h3>
+                <p><i class="bi bi-mortarboard"></i> Information Technology</p>
+                <p><i class="bi bi-check-circle"></i> 20 Projects &nbsp;&nbsp; <i class="bi bi-award"></i> 6 Achievements</p>
+              </div>
+            </div>
+            <div class="project-images">
+              <img src="Image_7.svg" alt="Project 1">
+              <img src="Image_8.svg" alt="Project 2">
+            </div>
+            <div class="tags">
+              <span>Cybersecurity</span>
+              <span>AI & Data Science</span>
+              <span>Backend System</span>
+            </div>
           </div>
-        </div>
-        <div class="project-images">
-          <img src="Image_7.svg" alt="Project 1">
-          <img src="Image_8.svg" alt="Project 2">
-        </div>
-        <div class="tags">
-          <span>Cybersecurity</span>
-          <span>AI & Data Science</span>
-          <span>Backend System</span>
-        </div>
+        </a>
       </div>
-    </a>
+    </div>
   </div>
 
   <div id="container-creators" class="container">
-    <a href="project5.html" class="card-link">
-      <div id="card-left" class="creator-card not-most justify-content-start">
-        <div class="creator-header">
-          <img src="Dio.svg" alt="Profile" class="profile-img">
-          <div class="creator-info">
-            <h3>Dionisius Seraf Saputra</h3>
-            <p><i class="bi bi-mortarboard"></i> Information Technology Education</p>
-            <p><i class="bi bi-check-circle"></i> 7 Projects &nbsp;&nbsp; <i class="bi bi-award"></i> 7 Achievements</p>
+    <div class="row justify-content-center g-4">
+      <!-- Card 1 -->
+      <div class="col-lg-6 col-md-8 col-sm-12">
+        <a href="project5.html" class="card-link">
+          <div id="card-left" class="creator-card not-most justify-content-start">
+            <div class="creator-header">
+              <img src="Dio.svg" alt="Profile" class="profile-img">
+              <div class="creator-info">
+                <h3>Dionisius Seraf Saputra</h3>
+                <p><i class="bi bi-mortarboard"></i> Information Technology Education</p>
+                <p><i class="bi bi-check-circle"></i> 7 Projects &nbsp;&nbsp; <i class="bi bi-award"></i> 7 Achievements</p>
+              </div>
+            </div>
+            <div class="project-images">
+              <img src="Image_9.svg" alt="Project 1">
+              <img src="image_10.svg" alt="Project 2">
+            </div>
+            <div class="tags">
+              <span>Machine Learning</span>
+              <span>AI & Data Science</span>
+              <span>Backend System</span>
+            </div>
           </div>
-        </div>
-        <div class="project-images">
-          <img src="Image_9.svg" alt="Project 1">
-          <img src="image_10.svg" alt="Project 2">
-        </div>
-        <div class="tags">
-          <span>Machine Learning</span>
-          <span>AI & Data Science</span>
-          <span>Backend System</span>
-        </div>
+        </a>
       </div>
-    </a>
-    <a href="project5.html" class="card-link">
-      <div id="card-right" class="creator-card not-most justify-content-end">
-        <div class="creator-header">
-          <img src="Nurul.svg" alt="Profile" class="profile-img">
-          <div class="creator-info">
-            <h3>Nurul Inayah</h3>
-            <p><i class="bi bi-mortarboard"></i> Computer Engineering</p>
-            <p><i class="bi bi-check-circle"></i> 20 Projects &nbsp;&nbsp; <i class="bi bi-award"></i> 3 Achievements</p>
+
+      <!-- Card 2 -->
+      <div class="col-lg-6 col-md-8 col-sm-12">
+        <a href="project5.html" class="card-link">
+          <div id="card-right" class="creator-card not-most justify-content-end">
+            <div class="creator-header">
+              <img src="Nurul.svg" alt="Profile" class="profile-img">
+              <div class="creator-info">
+                <h3>Nurul Inayah</h3>
+                <p><i class="bi bi-mortarboard"></i> Computer Engineering</p>
+                <p><i class="bi bi-check-circle"></i> 20 Projects &nbsp;&nbsp; <i class="bi bi-award"></i> 3 Achievements</p>
+              </div>
+            </div>
+            <div class="project-images">
+              <img src="Image_11.svg" alt="Project 1">
+              <img src="Image_12.svg" alt="Project 2">
+            </div>
+            <div class="tags">
+              <span>Game</span>
+              <span>UI/UX Design</span>
+              <span>Website</span>
+            </div>
           </div>
-        </div>
-        <div class="project-images">
-          <img src="Image_11.svg" alt="Project 1">
-          <img src="Image_12.svg" alt="Project 2">
-        </div>
-        <div class="tags">
-          <span>Game</span>
-          <span>UI/UX Design</span>
-          <span>Website</span>
-        </div>
+        </a>
       </div>
-    </a>
+    </div>
   </div>
 
   <div id="container-creators" class="container">
-    <a href="project5.html" class="card-link">
-      <div id="card-left" class="creator-card not-most justify-content-start">
-        <div class="creator-header">
-          <img src="Rakhman.svg" alt="Profile" class="profile-img">
-          <div class="creator-info">
-            <h3>Rakhmanullah Asyhari</h3>
-            <p><i class="bi bi-mortarboard"></i> Information System</p>
-            <p><i class="bi bi-check-circle"></i> 5 Projects &nbsp;&nbsp; <i class="bi bi-award"></i> 2 Achievements</p>
+    <div class="row justify-content-center g-4">
+      <!-- Card 1 -->
+      <div class="col-lg-6 col-md-8 col-sm-12">
+        <a href="project5.html" class="card-link">
+          <div id="card-left" class="creator-card not-most justify-content-start">
+            <div class="creator-header">
+              <img src="Rakhman.svg" alt="Profile" class="profile-img">
+              <div class="creator-info">
+                <h3>Rakhmanullah Asyhari</h3>
+                <p><i class="bi bi-mortarboard"></i> Information System</p>
+                <p><i class="bi bi-check-circle"></i> 5 Projects &nbsp;&nbsp; <i class="bi bi-award"></i> 2 Achievements</p>
+              </div>
+            </div>
+            <div class="project-images">
+              <img src="Image_13.svg" alt="Project 1">
+              <img src="Image_14.svg" alt="Project 2">
+            </div>
+            <div class="tags">
+              <span>Desktop</span>
+              <span>Mobile App</span>
+              <span>Backend System</span>
+            </div>
           </div>
-        </div>
-        <div class="project-images">
-          <img src="Image_13.svg" alt="Project 1">
-          <img src="Image_14.svg" alt="Project 2">
-        </div>
-        <div class="tags">
-          <span>Desktop</span>
-          <span>Mobile App</span>
-          <span>Backend System</span>
-        </div>
+        </a>
       </div>
-    </a>
-    <a href="project5.html" class="card-link">
-      <div id="card-right" class="creator-card not-most justify-content-end">
-        <div class="creator-header">
-          <img src="Dhyty.svg" alt="Profile" class="profile-img">
-          <div class="creator-info">
-            <h3>Muhammad Iqbal Dhyty</h3>
-            <p><i class="bi bi-mortarboard"></i> Informatics Engineering</p>
-            <p><i class="bi bi-check-circle"></i> 3 Projects &nbsp;&nbsp; <i class="bi bi-award"></i> 5 Achievements</p>
+
+      <!-- Card 2 -->
+      <div class="col-lg-6 col-md-8 col-sm-12">
+        <a href="project5.html" class="card-link">
+          <div id="card-right" class="creator-card not-most justify-content-end">
+            <div class="creator-header">
+              <img src="Dhyty.svg" alt="Profile" class="profile-img">
+              <div class="creator-info">
+                <h3>Muhammad Iqbal Dhyty</h3>
+                <p><i class="bi bi-mortarboard"></i> Informatics Engineering</p>
+                <p><i class="bi bi-check-circle"></i> 3 Projects &nbsp;&nbsp; <i class="bi bi-award"></i> 5 Achievements</p>
+              </div>
+            </div>
+            <div class="project-images">
+              <img src="Image_15.svg" alt="Project 1">
+              <img src="Image_16.svg" alt="Project 2">
+            </div>
+            <div class="tags">
+              <span>Cybersecurity</span>
+              <span>AI & Data Science</span>
+              <span>Backend System</span>
+            </div>
           </div>
-        </div>
-        <div class="project-images">
-          <img src="Image_15.svg" alt="Project 1">
-          <img src="Image_16.svg" alt="Project 2">
-        </div>
-        <div class="tags">
-          <span>Cybersecurity</span>
-          <span>AI & Data Science</span>
-          <span>Backend System</span>
-        </div>
+        </a>
       </div>
-    </a>
+    </div>
   </div>
 
   <!-- Footer -->
