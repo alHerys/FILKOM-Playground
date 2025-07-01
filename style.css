@@ -1220,7 +1220,7 @@ a.card-link {
   max-width: 100%;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 90px; /* jarak dari navbar */
+  margin-top: 70px; /* jarak dari navbar */
   margin-bottom: 32px;
   z-index: 1;
   padding: 0 120px 0 120px;
@@ -1228,7 +1228,7 @@ a.card-link {
 
 .project4-banner-img {
   width: 100%;
-  height: 540px;
+  height: 500px;
   object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
